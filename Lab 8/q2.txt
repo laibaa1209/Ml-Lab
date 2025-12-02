@@ -1,0 +1,70 @@
+TASK 2 – Suitability of Linear Regression for Electricity Consumption Dataset
+1. Review of the Dataset
+
+The provided dataset contains various household level features that are expected to influence monthly electricity consumption. These include:
+
+Number of appliances such as fans, refrigerators, air conditioners, televisions, monitors, and motor pumps
+
+Monthly usage hours
+
+Tariff rate
+
+Month of the year
+
+Categorical attributes including City and Company
+
+Target Variable: ElectricityBill (monthly electricity consumption cost)
+
+Most features are numerical and directly related to the electricity usage of a household.
+
+2. Assumption Consideration
+
+Linear regression relies on several core assumptions. Below is an evaluation of each assumption with respect to this dataset.
+
+a. Linearity
+
+The relationship between electricity consumption and its predictors is expected to be largely linear. As the number of appliances, usage hours, and tariff rate increase, the electricity bill also increases. These relationships are inherently additive in nature.
+Conclusion: This assumption is likely satisfied.
+
+b. Independence of Errors
+
+Each row represents a different household. There is no indication that observations are dependent on one another.
+Conclusion: This assumption is likely satisfied.
+
+c. Homoscedasticity (Constant Variance of Errors)
+
+Electricity consumption tends to show proportionate variation with appliance usage and household activity levels. While some variability is expected, no structural reason suggests drastic changes in variance across households.
+Conclusion: This assumption is reasonably satisfied.
+
+d. Normality of Residuals
+
+In real-world consumption data, residuals may deviate slightly from normality due to variations in lifestyle, efficiency of appliances, or tariff differences. However, linear regression is robust to mild violations of this assumption.
+Conclusion: This assumption may be slightly violated but not enough to prevent using linear regression.
+
+e. Absence of Perfect Multicollinearity
+
+Some predictors may be correlated with one another (e.g., household appliances vs. usage hours), but there is no indication of perfect linear dependence.
+Conclusion: This assumption is satisfied.
+
+3. Decision
+
+Linear regression is appropriate for this dataset.
+The features and the target variable have meaningful, interpretable, and largely linear relationships. The dataset does not present issues that violate the essential assumptions of linear regression to a prohibitive extent.
+
+4. Justification
+
+The dataset meets the fundamental requirements of linear regression due to the following reasons:
+
+Linearity: Electricity consumption logically increases with the number of appliances, hours of usage, and tariff rates, supporting a linear relationship.
+
+Independent Observations: Each household’s data is independent, satisfying the independence assumption.
+
+Acceptable Variance: Homoscedasticity is reasonably maintained as no extreme variance fluctuations are expected.
+
+Residual Normality (Approximate): Minor deviations are acceptable; linear regression is robust to this.
+
+No Perfect Multicollinearity: While correlations exist, none are perfectly linear or problematic.
+
+Final Conclusion
+
+Based on the dataset characteristics and a review of linear regression assumptions, linear regression is a suitable model for predicting monthly electricity bills using this dataset.
